@@ -2,18 +2,18 @@ app1:
   version: 0.0.1
   depends-on: app2
   run:
-    - ./installer1
+    - chmod 777 ./installer1 && ./installer1
 
 app2:
   version: 0.0.1
   run:
-    - ./installer2
+    -  chmod 777 ./installer2 &&./installer2
 
 app3:
   version: 0.0.1
   depends-on: app2
   run:
-    - ./installer3
+    - chmod 777 ./installer3 &&./installer3
 
 app4:
   version: 0.0.1
@@ -23,23 +23,23 @@ app4:
     - app7
     - app2
   run:
-    - ./installer4
+    - chmod 777 ./installer4 && ./installer4
 
 app5:
   version: 0.0.1
   depends-on:
     - app4
   run:
-    - ./installer5
+    - chmod 777 ./installer5 &&./installer5
 
 app6:
   version: 0.0.1
   depends-on:
     - app1
   run:
-    - ./installer6
+    - chmod 777 ./installer6 && ./installer6
 
 app7:
   version: 0.0.1
   run:
-    - ./installer7
+    - chmod 777 ./installer7 && ./installer7
