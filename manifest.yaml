@@ -1,0 +1,45 @@
+app1:
+  version: 0.0.1
+  depends-on: app2
+  run:
+    - ./installer1
+
+app2:
+  version: 0.0.1
+  run:
+    - ./installer2
+
+app3:
+  version: 0.0.1
+  depends-on: app2
+  run:
+    - ./installer3
+
+app4:
+  version: 0.0.1
+  depends-on:
+    - app1
+    - app3
+    - app7
+    - app2
+  run:
+    - ./installer4
+
+app5:
+  version: 0.0.1
+  depends-on:
+    - app4
+  run:
+    - ./installer5
+
+app6:
+  version: 0.0.1
+  depends-on:
+    - app1
+  run:
+    - ./installer6
+
+app7:
+  version: 0.0.1
+  run:
+    - ./installer7
